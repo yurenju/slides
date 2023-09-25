@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@4.6.1/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@4.6.1/dist/theme/black.css"
+    />
+    <link rel="stylesheet" href="./custom.css" />
+    <title>為什麼他總是可以提出好的技術方針？談筆記與知識管理</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Use external markdown resource-->
+        <section
+          data-markdown="slides.md"
+          data-separator="^\n---\n$"
+          data-separator-vertical="^\n-----\n$"
+          data-separator-notes="^Note:"
+        ></section>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    import Reveal from "https://unpkg.com/reveal.js@4.6.1/dist/reveal.esm.js";
+    import Markdown from "https://unpkg.com/reveal.js@4.6.1/plugin/markdown/markdown.esm.js";
+    import RevealNotes from "https://unpkg.com/reveal.js@4.6.1/plugin/notes/notes.esm.js";
+
+    let deck = new Reveal({
+      plugins: [Markdown, RevealNotes],
+    });
+    deck.initialize({
+      hash: true,
+    });
+  </script>
+</html>
